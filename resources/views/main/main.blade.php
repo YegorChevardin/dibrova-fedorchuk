@@ -1,289 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('main.layout.layout')
+@section('content')
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <div class="carousel-inner" role="listbox">
 
-  <title>Flattern Bootstrap Template - Index</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animated fadeInUp">
+                            <h2>Welcome to <span>Flattern</span></h2>
+                            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Favicons -->
-  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animated fadeInUp">
+                            <h2>Lorem Ipsum Dolor</h2>
+                            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animated fadeInUp">
+                            <h2>Sequi ea ut et est quaerat</h2>
+                            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
-</head>
-
-<body>
-
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-none d-lg-block">
-    <div class="container d-flex">
-      <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i>contact@example.com
-        <i class="icofont-phone"></i> +1 5589 55488 55
-      </div>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-        <a href="#" class="skype"><i class="icofont-skype"></i></a>
-        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex">
-
-      <div class="logo mr-auto">
-        <h1 class="text-light"><a href="{{ route('/') }}">Dibrova-Fedorchuk</a></h1>
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="{{ route('/') }}">Home</a></li>
-          <li><a href="{{ route('about') }}">About</a></li>
-          <li><a href="{{ route('services') }}">Services</a></li>
-          <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-          <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
-          <li><a href="{{ route('pricing') }}">Pricing</a></li>
-          <li><a href="{{ route('blog') }}">Blog</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ route('contact') }}">Contact</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-      <div class="carousel-inner" role="listbox">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animated fadeInUp">
-              <h2>Welcome to <span>Flattern</span></h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
             </div>
-          </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
         </div>
+    </section><!-- End Hero -->
 
-        <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animated fadeInUp">
-              <h2>Lorem Ipsum Dolor</h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+    <main id="main">
+
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-left">
+                        <h3>We've created more than <span>200 websites</span> this year!</h3>
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Request a quote</a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
+        </section><!-- End Cta Section -->
 
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animated fadeInUp">
-              <h2>Sequi ea ut et est quaerat</h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Check out <strong>our services</strong></h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><i class="icofont-computer"></i></div>
+                            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+                            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="icofont-earth"></i></div>
+                            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="icofont-image"></i></div>
+                            <h4 class="title"><a href="">Magni Dolores</a></h4>
+                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon"><i class="icofont-settings"></i></div>
+                            <h4 class="title"><a href="">Nemo Enim</a></h4>
+                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-        </div>
+        </section><!-- End Services Section -->
 
-      </div>
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
 
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Some of our <strong>recent works</strong></h2>
+                </div>
 
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-app">App</li>
+                            <li data-filter=".filter-card">Card</li>
+                            <li data-filter=".filter-web">Web</li>
+                        </ul>
+                    </div>
+                </div>
 
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+                <div class="row portfolio-container" data-aos="fade-up">
 
-    </div>
-  </section><!-- End Hero -->
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="{{ asset('assets/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 1</h4>
+                            <p>App</p>
+                            <a href="{{ asset('assets/img/portfolio/portfolio-1.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                            <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
 
-  <main id="main">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="{{ asset('assets/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Web 3</h4>
+                            <p>Web</p>
+                            <a href="{{ asset('assets/img/portfolio/portfolio-2.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
 
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3>We've created more than <span>200 websites</span> this year!</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Request a quote</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Check out <strong>our services</strong></h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up">
-              <div class="icon"><i class="icofont-computer"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 2</h4>
+                            <p>App</p>
+                            <a href="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                            <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+        </section><!-- End Portfolio Section -->
+
+        <!-- ======= Our Clients Section ======= -->
+        <section id="clients" class="clients">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Our <strong>Clients</strong></h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="icofont-earth"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="icofont-image"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="icofont-settings"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="icofont-tasks-alt"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Some of our <strong>recent works</strong></h2>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{ asset('assets/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{{ asset('assets/img/portfolio/portfolio-1.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="{{ asset('assets/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="{{ asset('assets/img/portfolio/portfolio-2.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="{{ asset('assets/img/portfolio/portfolio-3.jpg') }}" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="{{ asset('portfolio-details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Our Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Our <strong>Clients</strong></h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-      </div>
-    </section><!-- End Our Clients Section -->
-  </main><!-- End #main -->
-  @include('main.layout.footer')
+        </section><!-- End Our Clients Section -->
+    </main><!-- End #main -->
+@endsection
