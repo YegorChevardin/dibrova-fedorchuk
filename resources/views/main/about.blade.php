@@ -65,8 +65,7 @@
                             <div class="member-img">
                                 <img src="{{ asset('assets/img/team/team-1.jpg') }}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href="{{ url('https://www.facebook.com/andy.fedorczuk') }}" target="_blank"><i class="icofont-facebook"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -80,8 +79,8 @@
                             <div class="member-img">
                                 <img src="{{ asset('assets/img/team/team-2.jpg') }}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href="{{ url('https://www.facebook.com/profile.php?id=100009808128849') }}" target="_blank"><i class="icofont-facebook"></i></a>
+                                    <a href="{{ url('https://www.instagram.com/dibrova2011/?hl=ru') }}" target="_blank"><i class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -95,8 +94,8 @@
                             <div class="member-img">
                                 <img src="{{ asset('assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href="{{ url('https://www.facebook.com/Yegor.Chevardin') }}" target="_blank"><i class="icofont-facebook"></i></a>
+                                    <a href="{{ url('https://www.instagram.com/egor_chevardin/?hl=ru') }}" target="_blank"><i class="icofont-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
@@ -108,7 +107,7 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="200">
                             <div class="member-img">
-                                <img src="{{ asset('assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('assets/img/team/team-4.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
                                 <h4>3 dogs and a cat</h4>
