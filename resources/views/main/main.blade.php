@@ -34,7 +34,7 @@
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
             <div class="container text-center">
-                <h3>Our family was formed <span id="family_seconds"></span> seconds ago!</h3>
+                <h3>Our family was formed <span id="days"></span> days <span id="hours"></span> hours <span id="minutes"></span> minutes <span id="seconds"></span> seconds ago!</h3>
             </div>
         </section><!-- End Cta Section -->
         <!-- ======= Services Section ======= -->

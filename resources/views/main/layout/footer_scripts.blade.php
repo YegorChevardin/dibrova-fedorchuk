@@ -11,3 +11,5 @@
 <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
 <!-- Template Main JS File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<!-- Others Template JS files -->
+<script lang="text/javascript" src="{{ asset('assets/js/copyright_year.js') }}" defer></script>

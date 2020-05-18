@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Flattern Bootstrap Template - Index</title>
+        <title>Dibrova-Fedorchuk web site</title>
         <meta name="author" content="Yegor Chevardin"/>
         <meta name="keywords" content=""/>
         <meta name="description" content="Our home web page that helps take care about our guests"/>
