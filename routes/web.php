@@ -54,3 +54,7 @@ Route::get('/portfolio-details', function() {
     return view('main.portfolio-details');
 })->name('portfolio-details');
 /*Secondary pages section end*/
+
+/*Forms controllers section start*/
+Route::match(['get', 'post'], '/email-contact', 'ContactFormController@index')->name('email-contact');
+/*Forms controllers section end*/
