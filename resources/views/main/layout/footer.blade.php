@@ -21,8 +21,8 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Join Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <h4>Join our next party</h4>
+                    <p>Type your email and send a request. We will answer on your feedback!</p>
                     <form action="" method="post">
                         <input type="email" name="email"><input type="submit" value="Subscribe">
                     </form>
