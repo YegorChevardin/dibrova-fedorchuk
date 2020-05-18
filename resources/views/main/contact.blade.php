@@ -44,7 +44,7 @@
                 </div>
                 <div class="row mt-5 justify-content-center" data-aos="fade-up">
                     <div class="col-lg-10">
-                        <form action="{{ route('email-contact') }}" method="post" role="form" class="contact-form">
+                        <form action="{{ route('email-contact') }}" method="post" role="form" class="contact-form" id="contact-form">
                             @csrf
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
