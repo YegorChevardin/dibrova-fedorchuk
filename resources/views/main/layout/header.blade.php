@@ -8,9 +8,18 @@
             <ul>
                 <li><a href="{{ route('/') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
-                <li><a href="{{ route('moments') }}">Moments</a></li>
-                <li><a href="{{ route('blog') }}">Blog</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
+                @if(Auth::check())
+                    <li><a href="{{ route('moments') }}">Moments</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('logout') }}">Logout</a></li>
+                @elseif(Auth::check() == false)
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Register</a></li>
+                @endif
+                @if(Auth::user('Admin'))
+                    <li><a href="/admin">Admin panel</a></li>
+                @endif
             </ul>
         </nav><!-- .nav-menu -->
     </div>
