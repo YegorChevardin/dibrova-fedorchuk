@@ -17,9 +17,6 @@
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
-                @if(Auth::user('Admin'))
-                    <li><a href="/admin">Admin panel</a></li>
-                @endif
             </ul>
         </nav><!-- .nav-menu -->
     </div>

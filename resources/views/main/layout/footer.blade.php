@@ -16,15 +16,16 @@
                     <h4>Useful Links</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('about') }}">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contact') }}">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 footer-newsletter">
                     <h4>Join our next party</h4>
                     <p>Type your email and send a request. We will answer on your feedback!</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    <form action="{{ route('subscribe') }}" method="post">
+                        @csrf
+                        <input type="email" name="email"><input type="submit" name="Submit" value="Subscribe">
                     </form>
                 </div>
             </div>
@@ -35,10 +36,6 @@
             <div class="copyright">
                 &copy; Copyright <span id="copyright_year"></span> <strong><span>Dibrova-Fedorchuk</span></strong>. All Rights Reserved
             </div>
-        </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         </div>
     </div>
 </footer><!-- End Footer -->

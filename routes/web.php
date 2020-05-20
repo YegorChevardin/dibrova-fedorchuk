@@ -32,6 +32,8 @@ Route::get('/moments-details', function() {
 Route::match(['get', 'post'], '/email-contact', 'ContactFormController@index')->name('email-contact');
 
 Route::match(['get', 'post'], '/comment/{postId?}', 'CommentController@send')->name('comment');
+
+Route::match(['get', 'post'], '/subscribe', 'SubscribeController@index')->name('subscribe');
 /*Forms controllers section end*/
 
 /*Voyager controllers section start*/
@@ -56,6 +58,6 @@ Route::get('/register', function() {
 Route::get('/logout', function() {
     Auth::logout();
 
-    return view('/');
+    return view('main.main');
 })->name('logout');
 /*Auth routes section end*/
