@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SubscribeMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Mail;
 
 class SubscribeController extends Controller
@@ -16,7 +17,10 @@ class SubscribeController extends Controller
                 ];
 
                 Mail::to('dibrova2011@gmail.com')->send(new SubscribeMail($data));
+
+                return back();
             }
         }
+        abort(404);
     }
 }

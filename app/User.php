@@ -42,7 +42,12 @@ class User extends \TCG\Voyager\Models\User
         return $this->hasMany('App\Post');
     }
 
-    public function roles() {
-        return $this->belongsToMany(Role::class, 'role_id');
+    /*public function roles() {
+        return $this->belongsToMany(Role::class, 'users', 'id', 'role_id');
     }
+
+    public function isAdministrator() {
+        return $this->roles()->where('name', 'admin')->exists();
+    }*/
+
 }

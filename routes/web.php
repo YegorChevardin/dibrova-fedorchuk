@@ -10,9 +10,7 @@ Route::get('/about', function() {
     return view('main.about');
 })->name('about');
 
-Route::get('/moments', function() {
-    return view('main.moments');
-})->name('moments')->middleware('auth');
+Route::get('/moments', 'MomentsController@index')->name('moments')->middleware('auth');
 
 Route::get('/blog', 'BlogController@show')->name('blog')->middleware('auth');
 
@@ -22,10 +20,6 @@ Route::get('/contact', function() {
 
 /*Secondary pages section start*/
 Route::get('/blog-single/{postId?}', 'BlogSingleController@show')->name('blog-single')->middleware('auth');
-
-Route::get('/moments-details', function() {
-    return view('main.moments-details');
-})->name('moments-details')->middleware('auth');
 /*Secondary pages section end*/
 
 /*Forms controllers section start*/
