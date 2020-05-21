@@ -10,9 +10,7 @@ Route::get('/about', function() {
     return view('main.about');
 })->name('about');
 
-Route::get('/moments', function() {
-    return view('main.moments');
-})->name('moments')->middleware('auth');
+Route::get('/moments', 'MomentsController@index')->name('moments')->middleware('auth');
 
 Route::get('/blog', 'BlogController@show')->name('blog')->middleware('auth');
 
@@ -22,16 +20,14 @@ Route::get('/contact', function() {
 
 /*Secondary pages section start*/
 Route::get('/blog-single/{postId?}', 'BlogSingleController@show')->name('blog-single')->middleware('auth');
-
-Route::get('/moments-details', function() {
-    return view('main.moments-details');
-})->name('moments-details')->middleware('auth');
 /*Secondary pages section end*/
 
 /*Forms controllers section start*/
 Route::match(['get', 'post'], '/email-contact', 'ContactFormController@index')->name('email-contact');
 
 Route::match(['get', 'post'], '/comment/{postId?}', 'CommentController@send')->name('comment');
+
+Route::match(['get', 'post'], '/subscribe', 'SubscribeController@index')->name('subscribe');
 /*Forms controllers section end*/
 
 /*Voyager controllers section start*/
@@ -56,6 +52,6 @@ Route::get('/register', function() {
 Route::get('/logout', function() {
     Auth::logout();
 
-    return view('/');
+    return view('main.main');
 })->name('logout');
 /*Auth routes section end*/

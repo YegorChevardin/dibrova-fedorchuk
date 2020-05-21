@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover, .nav-menu .active > a,.nav-menu li:hover > a {
   color: #f03c02;
   text-decoration: none;
 }

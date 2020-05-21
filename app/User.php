@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use TCG\Voyager\Models\Role;
 
 class User extends \TCG\Voyager\Models\User
 {
@@ -40,4 +41,13 @@ class User extends \TCG\Voyager\Models\User
     public function post() {
         return $this->hasMany('App\Post');
     }
+
+    /*public function roles() {
+        return $this->belongsToMany(Role::class, 'users', 'id', 'role_id');
+    }
+
+    public function isAdministrator() {
+        return $this->roles()->where('name', 'admin')->exists();
+    }*/
+
 }
