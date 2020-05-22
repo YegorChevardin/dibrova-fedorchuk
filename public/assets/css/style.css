@@ -2126,3 +2126,9 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+/*Hide class section start*/
+.hide {
+    display: none !important;
+}
+/*Hide class section end*/
