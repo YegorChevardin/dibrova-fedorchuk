@@ -31,7 +31,7 @@ class SubscribeMail extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data['email'])->markdown('emails.subscribe')->with([
+        return $this->from($this->data['email'])->markdown('main.emails.subscribe')->with([
             'email' => $this->data['email']
         ]);
     }
