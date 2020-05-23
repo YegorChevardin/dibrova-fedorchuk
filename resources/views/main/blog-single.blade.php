@@ -1,5 +1,10 @@
 @extends('main.layout.layout')
 @section('content')
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <main id="main">
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
@@ -52,52 +57,30 @@
                             </p>
                         </div><!-- End blog author bio -->
                         <div class="blog-comments" id="blog-comments" data-aos="fade-up">
-                            <h4 class="comments-count">8 Comments</h4>
-                            <div id="comment-2" class="comment clearfix">
-                                <img src="{{ asset('assets/img/comments-2.jpg') }}" class="comment-img  float-left" alt="">
-                                <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="icofont-reply"></i> Reply</a></h5>
-                                <time datetime="2020-01-01">01 Jan, 2020</time>
-                                <p>
-                                    Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
-                                </p>
-                                <div id="comment-reply-1" class="comment comment-reply clearfix">
-                                    <img src="{{ asset('assets/img/comments-3.jpg') }}" class="comment-img  float-left" alt="">
-                                    <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="icofont-reply"></i> Reply</a></h5>
-                                    <time datetime="2020-01-01">01 Jan, 2020</time>
-                                    <p>
-                                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
-
-                                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
-                                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
-                                    </p>
-                                    <div id="comment-reply-2" class="comment comment-reply clearfix">
-                                        <img src="{{ asset('assets/img/comments-4.jpg') }}" class="comment-img  float-left" alt="">
-                                        <h5>Sianna Ramsay</h5>
-                                        <time datetime="2020-01-01">01 Jan, 2020</time>
-                                        <p>
-                                            Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
-                                        </p>
-                                    </div><!-- End comment reply #2-->
-                                </div><!-- End comment reply #1-->
-                            </div><!-- End comment #2-->
+                            <h4 class="comments-count">Comments</h4>
+                            @if(!empty($comments))
+                                @foreach($comments as $comment)
+                                    <div class="comment clearfix">
+                                        <img src="{{ asset('assets/img/comments-2.jpg') }}" class="comment-img  float-left" alt="">
+                                        <h5><a>{{ $comment->name }}</a></h5>
+                                        <time datetime="2020-01-01">{{ date('d.m.Y', strtotime($comment->created_at)) }}</time>
+                                        <p>{{ $comment->comment }}</p>
+                                    </div>
+                                @endforeach
+                            @else
+                                <div class="comment clearfix">
+                                    <h5><a>0 comments</a></h5>
+                                    <p>There is no replys for this post</p>
+                                </div>
+                            @endif
                             <div class="reply-form">
                                 <h4>Leave a Reply</h4>
                                 <p>Your email address will not be published. Required fields are marked * </p>
-                                <form action="{{ url('comment'.DIRECTORY_SEPARATOR.$post->id) }}" method="post">
+                                <form action="{{ route('comment') }}" method="post">
                                     @csrf
-                                    <div class="row">
-                                        <div class="col-md-6 form-group">
-                                            <input name="name" type="text" class="form-control" placeholder="Your Name*">
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                            <input name="email" type="text" class="form-control" placeholder="Your Email*">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col form-group">
-                                            <input name="website" type="text" class="form-control" placeholder="Your Website">
-                                        </div>
-                                    </div>
+                                    <input type="hidden" name="name" value="{{ Auth::user()->name }}"/>
+                                    <input type="hidden" name="email" value="{{ Auth::user()->email }}"/>
+                                    <input type="hidden" name="postId" value="{{ $post->id }}"/>
                                     <div class="row">
                                         <div class="col form-group">
                                             <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>

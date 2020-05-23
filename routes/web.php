@@ -10,8 +10,6 @@ Route::get('/about', function() {
     return view('main.about');
 })->name('about');
 
-Route::get('/moments', 'MomentsController@index')->name('moments')->middleware('auth');
-
 Route::get('/blog', 'BlogController@show')->name('blog')->middleware('auth');
 
 Route::get('/contact', function() {
@@ -25,7 +23,7 @@ Route::get('/blog-single/{postId?}', 'BlogSingleController@show')->name('blog-si
 /*Forms controllers section start*/
 Route::match(['get', 'post'], '/email-contact', 'ContactFormController@index')->name('email-contact');
 
-Route::match(['get', 'post'], '/comment/{postId?}', 'CommentController@send')->name('comment');
+Route::match(['get', 'post'], '/comment', 'CommentController@send')->name('comment');
 
 Route::match(['get', 'post'], '/subscribe', 'SubscribeController@index')->name('subscribe');
 /*Forms controllers section end*/

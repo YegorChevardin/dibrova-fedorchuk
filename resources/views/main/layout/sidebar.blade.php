@@ -3,7 +3,7 @@
         <h3 class="sidebar-title">Search</h3>
         <div class="sidebar-item search-form">
             <form action="">
-                <input type="text">
+                <input type="text" id="search">
                 <button type="submit"><i class="icofont-search"></i></button>
             </form>
         </div><!-- End sidebar search formn-->
@@ -19,3 +19,6 @@
         </div><!-- End sidebar recent posts-->
     </div><!-- End sidebar -->
 </div><!-- End blog sidebar -->
+<!-- Sidebar search section start -->
+<script text="text/javascript" src=" {{ asset('assets/js/sidebar_search.js') }} " defer></script>
+<!-- Sidebar search section end -->
