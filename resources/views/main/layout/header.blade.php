@@ -10,7 +10,6 @@
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
                 @if(Auth::check())
-                    <li><a href="{{ route('moments') }}">Moments</a></li>
                     <li><a href="{{ route('blog') }}">Blog</a></li>
                     @if(Auth::user()->role_id == 1)
                         <li class="drop-down"><a href="">Account</a>
