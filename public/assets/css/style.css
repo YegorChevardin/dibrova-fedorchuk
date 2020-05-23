@@ -1456,7 +1456,6 @@ section {
 }
 
 .blog .entry .entry-img {
-  max-height: 400px;
   margin: -30px -30px 20px -30px;
   overflow: hidden;
 }
@@ -2127,14 +2126,8 @@ section {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-.hide {
-    display: none;
-}
-=======
 /*Hide class section start*/
 .hide {
     display: none !important;
 }
 /*Hide class section end*/
->>>>>>> 3d8b62253e594fae6d0334e87edf83888f3cabbe
