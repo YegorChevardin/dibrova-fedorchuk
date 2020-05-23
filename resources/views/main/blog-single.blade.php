@@ -41,13 +41,6 @@
                                     echo "{$post->body}";
                                 ?>
                             </div>
-                            <div class="entry-footer clearfix">
-                                <div class="float-right share">
-                                    <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
-                                    <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
-                                    <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
-                                </div>
-                            </div>
                         </article><!-- End blog entry -->
                         <div class="blog-author clearfix" data-aos="fade-up">
                             <img src="{{ asset('storage'.DIRECTORY_SEPARATOR.$post->user->avatar) }}" class="rounded-circle float-left" alt="">

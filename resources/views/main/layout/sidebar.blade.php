@@ -4,11 +4,15 @@
         <div class="sidebar-item search-form">
             <form action="">
                 <input type="text" id="search">
+<<<<<<< HEAD
                 <button type="submit"><i class="icofont-search"></i></button>
+=======
+                <button type="submit" id="search_submit"><i class="icofont-search"></i></button>
+>>>>>>> 3d8b62253e594fae6d0334e87edf83888f3cabbe
             </form>
         </div><!-- End sidebar search formn-->
         <h3 class="sidebar-title">Older posts</h3>
-        <div class="sidebar-item recent-posts">
+        <div id="recent-posts" class="sidebar-item recent-posts">
             @foreach($all_posts as $post)
                 <div class="post-item clearfix">
                     <img src="{{asset('storage'.DIRECTORY_SEPARATOR.$post->image)}}" alt="picture of current post">
@@ -19,6 +23,10 @@
         </div><!-- End sidebar recent posts-->
     </div><!-- End sidebar -->
 </div><!-- End blog sidebar -->
+<<<<<<< HEAD
 <!-- Sidebar search section start -->
 <script text="text/javascript" src=" {{ asset('assets/js/sidebar_search.js') }} " defer></script>
 <!-- Sidebar search section end -->
+=======
+<script lang="text/javascript" src="{{ asset('assets/js/sidebar_search.js') }}" defer></script>
+>>>>>>> 3d8b62253e594fae6d0334e87edf83888f3cabbe
